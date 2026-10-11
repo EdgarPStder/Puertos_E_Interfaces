@@ -8,9 +8,10 @@ Objetivo: Configurar el ESP32 como un servidor web, conectar a una red Wi-Fi y c
     
     #include <WiFi.h>
     #include <WebServer.h>
+    #include "arduino_secrets.h" // Credenciales Wi-Fi (copia arduino_secrets.example.h)
 
-    const char* ssid = "UAM-ROBOTICA"; // Reemplaza con tu SSID de Wi-Fi
-    const char* password = "m4nt32024uat"; // Reemplaza con tu contraseña de Wi-Fi
+    const char* ssid = SECRET_SSID;
+    const char* password = SECRET_PASS;
 
     WebServer server(80);
     const int ledPin = 2;
